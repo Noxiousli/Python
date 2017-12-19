@@ -1,0 +1,34 @@
+1-1Expression
+2**3
+8
+Expression==operator + value
+    operator[6](** * / % + -)       //比java多一种**指数
+    value 
+       datatype	[3]					//java4+2/1/1
+         int	5
+         float 5.0
+         string 'Alice'
+       name[3]
+       字母，数字，_     sos：但是不能开头是数字
+         小写，驼峰原则 aliceDog 
+
+
+print('Hello world')
+print('What is your name?')
+myName = input()
+print('It is good to meet you ' + myName)
+print(len(myName))
+print('What is your age?')
+myAge = input()
+print('You will be ' + str(int(myAge)+1) + ' in a year.') 
+
+
+//结果（空格）
+Hello world
+What is your name?
+fsg
+It is good to meet youfsg
+3
+What is your age?
+8
+You will be 9 in a year.
