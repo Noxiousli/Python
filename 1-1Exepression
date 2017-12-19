@@ -1,17 +1,20 @@
 1-1Expression
+一.基本概念
 2**3
 8
-Expression==operator + value
-    operator[6](** * / % + -)       //比java多一种**指数
-    value 
-       datatype	[3]					//java4+2/1/1
-         int	5
-         float 5.0
-         string 'Alice'
-       name[3]
-       字母，数字，_     sos：但是不能开头是数字
-         小写，驼峰原则 aliceDog 
+1.Expression==operator + value
+1.1operator[6](** * / % + -)       //比java多一种**指数
+1.2value
+1.2.1datatype[3]		
+int	5            //int()---使小数变为整数
+float 5.0
+string 'Alice'
+     			//java4+2/1/1
+1.3name[3]
+字母，数字，_     sos：但是不能开头是数字
+小写，驼峰原则 aliceDog 
 
+二.实际操作
 
 print('Hello world')
 print('What is your name?')
@@ -32,3 +35,25 @@ It is good to meet youfsg
 What is your age?
 8
 You will be 9 in a year.
+
+三、Tips
+1.print() 打出一空行
+2.#==//
+3.功能function()括号让python知道这是一个function，而不是变量
+3.1 print()
+3.2 input()等待输入，并按enter,是string，即使输入的是数字
+3.3 len() 计算字符string 格式：len('....')
+4.string和int不能相加，也就是字符不可以和数字相加，字符
+和字符，数字和数字可以
+5.字符转数字。int()和float（）里面只能是字符数字‘3’，int里面不可以是小数，两个都不可以是‘字符’
+  数字转字符 str（）
+
+四、总结
+1.运算符号：
+1.1 数学运算：**；*；/；%；+；-
+1.2 字符运算：*；+
+2.3种数据类型
+3.4种功能 print len input str；int；float
+
+
+
