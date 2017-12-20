@@ -1,4 +1,11 @@
 一、Boolean
+''  0  0.0 这三个是false
+比如
+>>> name = '' #''赋值给name，那么name就是false,not name就是True
+>>> not name
+True
+
+
 二、比较运算符号（comparison operator）
   1.等于/不等于
   ==；！= 可以用来比较三种数据类型
@@ -30,6 +37,7 @@
   >>> myAge = 29 
   >>> myAge >= 10
   True
+  
  三、布尔运算符（Boolean operators）
  运算顺序 not and or
  1.and False容易True很难
@@ -41,6 +49,7 @@
  True
  >>> not not not not True 
  True
+ 
  四、comparison与Boolean混合
  因为comparison计算结果为Boolean，例如：4 < 5 结果为True
  下面这个例子，先计算其他，最后是Boolean
