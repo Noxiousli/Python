@@ -3,7 +3,7 @@
 2**3
 8
 1.Expression==operator + value
-1.1operator[6](** * / % + -)       //比java多一种**指数
+1.1operator[6](** ；*； /；//； %； +； -)       //比java多一种**指数
 1.2value
 1.2.1datatype[3]		
 int	5            //int()---使小数变为整数
@@ -50,7 +50,7 @@ You will be 9 in a year.
 
 四、总结
 1.运算符号：
-1.1 数学运算：**；*；/；%；+；-
+1.1 数学运算：**；*；/；//；%；+；-
 1.2 字符运算：*；+
 2.3种数据类型
 3.4种功能 print len input str；int；float
