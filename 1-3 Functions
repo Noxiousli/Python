@@ -1,0 +1,17 @@
+一、自己定义function
+def hello():
+    print('Howdy!')
+    print('Howdy!!!')
+    print('Hello there.')#def之后的是定义方法，下面hello（）是调用自己创建的方法
+
+hello()
+hello()
+hello()
+
+def hello(name):
+    print('Hello ' + name)
+
+hello('Alice')
+hello('Bob')
+
+####方法（）括号里可以放变量
