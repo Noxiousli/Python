@@ -1,0 +1,86 @@
+总结：
+1.选择
+if/elif带有condition
+     else无condition
+     if
+     elif
+     elif
+     ....
+     else
+ 2.循环 while
+
+一、Flow Control元素
+1.condition
+2.clause
+ a block of code
+ 
+二、if 
+结构：
+1.if condition 冒号
+2.clause
+例如：
+print('What is your name?')
+name = input()
+if name == 'Alice':
+  print('Hi, Alice.')
+三、else
+结构：
+1.else 冒号
+2.clause
+例如：
+print('What is your name?')
+name = input()
+if name == 'Alice':
+  print('Hi Alice')
+else:
+  print('Hello, Stranger.')
+  
+三、elif                              #同else，上面的错了，才可以执行#当有多个elif时顺序很重要
+结构：
+1.elif condition 冒号
+2.clause
+例如：一个
+if name == 'Alice':
+  print('Hi Alice')
+elif age > 12:
+  print('You are not Alice')
+                             #多个 age>2000放在100之后，就不会被执行
+print('What is your name?')
+name = input()
+print('How old are you?')
+age = int(input())
+if name == 'Alice':
+    print('Hi, Alice.')
+elif age < 12:
+    print('You are not Alice, kiddo.')
+elif age > 2000:
+    print('Unlike you, Alice is not an undead, immortal vampire.')   
+elif age > 100:
+    print('You are not Alice, grannie.')
+    
+四、while loop（循环）
+结构
+1.while condition 冒号
+2.clause
+
+name = ''      #目这一步的是为了进入循环
+while name != 'your name':
+    print('Please type your name.')
+    name = input()
+print('Thank you!')
+
+while True:
+    print('Please type your name.')
+    name = input()
+    if name == 'your name':
+        break
+print('Thank you!')
+五、break/continue
+六、
+
+
+
+
+    
+
+  
