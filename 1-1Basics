@@ -54,6 +54,12 @@ You will be 9 in a year.
 1.2 字符运算：*；+
 2.3种数据类型
 3.4种功能 print len input str；int；float
+4.>>> 42 == '42' 
+False
+>>> 42 == 42.0 
+True 
+>>> 42.0 == 0042.000 
+True
 
 
 
