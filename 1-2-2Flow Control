@@ -75,7 +75,9 @@ while True:
     if name == 'your name':
         break
 print('Thank you!')
+
 五、break/continue 只能用在for和while循环里
+
 六、for loop(循环)
 结构：
 1.for 变量 in range（）：
@@ -83,6 +85,7 @@ print('Thank you!')
 print('My name is')
 for i in range(5):
     print('Jimmy Five Times (' + str(i) + ')')
+    
 七、range()括号里面可以是正数，也可以是负数,只能是int
 1.一个数range(4)
  for i in range(4)： #变量i初始值为0，range括号里的数字代表i增加，到4停止，但是不包括4
@@ -98,6 +101,14 @@ for i in range(12, 16):
 for i in range(0, 10, 2):
     print(i)
 结果 0 2 4 6 8
+
+八、import 
+module ---function (module中有function）
+调用fuction，需要importing module
+例如：
+fuction：bacon（）
+module：spam
+importing之后 就是spam.bacon()
 
 
 
