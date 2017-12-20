@@ -75,8 +75,31 @@ while True:
     if name == 'your name':
         break
 print('Thank you!')
-五、break/continue
-六、
+五、break/continue 只能用在for和while循环里
+六、for loop(循环)
+结构：
+1.for 变量 in range（）：
+2.clause
+print('My name is')
+for i in range(5):
+    print('Jimmy Five Times (' + str(i) + ')')
+七、range()括号里面可以是正数，也可以是负数,只能是int
+1.一个数range(4)
+ for i in range(4)： #变量i初始值为0，range括号里的数字代表i增加，到4停止，但是不包括4
+2.两个数range(4,7)
+第一个数字是开始数值，第二个是结束数值，但是包括在内
+例如
+for i in range(12, 16):
+        print(i)
+结果12 13 14 15
+3.三个数值range(4,10,3)
+第一个开始，第二个是结束，但是不包括在内，第三个是变化的值
+例如
+for i in range(0, 10, 2):
+    print(i)
+结果 0 2 4 6 8
+
+
 
 
 
