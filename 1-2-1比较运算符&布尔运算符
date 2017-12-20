@@ -30,4 +30,20 @@
   >>> myAge = 29 
   >>> myAge >= 10
   True
-  
+ 三、布尔运算符（Boolean operators）
+ 运算顺序 not and or
+ 1.and False容易True很难
+ 2.or  相反
+ 3.not 可以嵌套
+ >>> not True
+ False 
+  >>> not False
+ True
+ >>> not not not not True 
+ True
+ 四、comparison与Boolean混合
+ 因为comparison计算结果为Boolean，例如：4 < 5 结果为True
+ 下面这个例子，先计算其他，最后是Boolean
+ >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2 
+ True
+ 
