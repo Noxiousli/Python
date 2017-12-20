@@ -1,0 +1,8 @@
+1.三种数据类型中的小数，叫做浮点数字==flaoting point numbers
+2.bacon = 20
+  bacon + 1
+  最后bacon = 20，并不会+1，变成21.如果想要加1，如下
+  bacon = 20
+  bscon = bacon + 1
+
+  
