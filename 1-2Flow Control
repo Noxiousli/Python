@@ -1,0 +1,33 @@
+一、Boolean
+二、比较运算符号（comparison operator）
+  1.等于/不等于
+  ==；！= 可以用来比较三种数据类型
+  >>> 'hello' == 'hello' 
+  True 
+  >>> 'hello' == 'Hello' 
+  False 
+  >>> 'dog' != 'cat' 
+  True 
+  >>> True == True
+  True 
+  >>> True != False 
+  True 
+  >>> 42 == 42.0 
+  True 
+  >>> 42 == '42' 
+  False
+  2.大于；小于；大于等于；小于等于
+  > / < / >= /<=   只能比较数字，也就是两种，分别是int和floating point number
+  >>> 42 < 100 
+  True 
+  >>> 42 > 100 
+  False
+  >>> 42 < 42 
+  False 
+  >>> eggCount = 42 
+  >>> eggCount <= 42 
+  True 
+  >>> myAge = 29 
+  >>> myAge >= 10
+  True
+  
