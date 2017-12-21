@@ -3,7 +3,7 @@
 2**3
 8
 1.Expression==operator + value
-1.1operator[6](** ；*； /；//； %； +； -)       //比java多一种**指数
+1.1operator[6](** ；*； /；//； %； +； -)       //比java多**指数,//取整
 1.2value
 1.2.1datatype[3]		
 int	5            //int()---使小数变为整数
@@ -45,7 +45,8 @@ You will be 9 in a year.
 3.3 len() 计算字符string 格式：len('....')
 4.string和int不能相加，也就是字符不可以和数字相加，字符
 和字符，数字和数字可以
-5.字符转数字。int()和float（）里面只能是字符数字‘3’，int里面不可以是小数，两个都不可以是‘字符’
+5.字符转数字。int()和float（）
+
   数字转字符 str（）
 
 四、总结
