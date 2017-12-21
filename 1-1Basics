@@ -46,6 +46,25 @@ You will be 9 in a year.
 4.string和int不能相加，也就是字符不可以和数字相加，字符
 和字符，数字和数字可以
 5.字符转数字。int()和float（）
+#int('数字，但是不能是小数，也不能是字符')原因，我自己理解是，int（‘’）将字符转为数字，但是不改变数值，当里面是小数时，int之后是小数，而int只能数整数！
+#int()和float()数字随意
+例如
+>>> int(1.25) 
+1 
+>>> int(1.99) 
+1
+>>> float(10) 
+10.0
+例如
+>>> int('42') 
+42 
+>>> int('-99')
+-99
+>>> int('99.9') 
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    int('99.9')
+ValueError: invalid literal for int() with base 10: '99.9'
 
   数字转字符 str（）
 
