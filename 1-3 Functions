@@ -91,6 +91,20 @@ cats dogs mice #有空格
 >>> print('cats', 'dogs', 'mice', sep=',')
 cats,dogs,mice#加了逗号
 
-六
+六、local and global Scope
+local scope #我理解的是自己定义的方法，当被调用结束时，里面的变量都被销毁了
+globle scope #定义方法之外的
+例如：
+def spam():       ####local scope
+	eggs = 31337
+
+
+spam()          ####globle scope
+print(eggs)    #eggs是local scope里的变量，global scope不可以使用，因为在spam调用时已经被销毁了
+结果
+Traceback (most recent call last): 
+ File "C:/test3784.py", line 4, in <module>
+  print(eggs) 
+NameError: name 'eggs' is not defined
 
 
