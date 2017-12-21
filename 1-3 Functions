@@ -80,4 +80,17 @@ Python adds return None to the end of any func- tion definition with no return s
 Python给不需要return语句的function，加了一个隐形的return none，例如方法print();len();input()
 
 五、keyword Arguments and print()
+1.end=''
+print('Hello', end='') #end=''去掉后面的换行键。  print('Hello'+'World')==print('Hello','World')逗号和加号的作用一样
+print('World')
+结果
+HelloWorld
+2.sep=','
+>>> print('cats', 'dogs', 'mice') 
+cats dogs mice #有空格
+>>> print('cats', 'dogs', 'mice', sep=',')
+cats,dogs,mice#加了逗号
+
+六
+
 
