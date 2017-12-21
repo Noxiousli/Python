@@ -106,5 +106,7 @@ Traceback (most recent call last):
  File "C:/test3784.py", line 4, in <module>
   print(eggs) 
 NameError: name 'eggs' is not defined
-
+1.Local Variables Cannot Be Used in the Global Scope
+global scope不可以使用local scope里的变量（local variable）
+2.
 
