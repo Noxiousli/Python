@@ -74,6 +74,10 @@ print(r)
 四、the none Value
 >>> spam = print('Hello!')
 Hello! 
->>> None == spam True
+>>> None == spam 
+True
 Python adds return None to the end of any func- tion definition with no return statement.
-Python给
+Python给不需要return语句的function，加了一个隐形的return none，例如方法print();len();input()
+
+五、keyword Arguments and print()
+
