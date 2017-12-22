@@ -1,0 +1,16 @@
+一、Using for Loops with Lists
+使用for和range(len(somelist))来把一个list的索引浏览一遍
+for i in range(4): #range(4)是list-like value 被叫做sequences
+      print(i)
+for i in [0, 1, 2, 3]: 
+      print(i)     
+这两个程序一样，结果
+0
+1
+2
+3
+
+
+二、The in and not in Operators
+使用in和not in来检查某个value是否在某个list里面
+
