@@ -1,5 +1,6 @@
 一、Getting Individual Values in a List with Indexes
-1.index
+一个list里面的value可以是任何data type，可以混合
+1.使用index调用list里的value
 spam = ['cat', 'bat', 'rat', 'elephant']
 变量    value--list 里面的各个value在list里有index，我的理解是在list里的位置
 第一个value 'cat' index0
@@ -22,4 +23,33 @@ spam = ['cat', 'bat', 'rat', 'elephant']
 'Hello cat' 
 >>> 'The ' + spam[1] + ' ate the ' + spam[0] + '.' 
 'The bat ate the cat.'
+####################################
+2.一个list里可以有其他list
+例如
+>>> spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]#含有两个list
+这时候index的表达就有变化
+spam[][]
+第一个[]：选择第几个list，也是0.1.2.3... 这样排列
+第二个[]：选择了list之后，第二个index是选择了的那个list里的第几个value
+##############################################
+>>> spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+>>>spam[1][2]#第二个list，第三个值
+30
+###############################################
+如果只写一个[]，代表只选择第几个list，Python会打印出这个list中所有的值
+上面这个例子
+>>> spam = [['cat', 'bat'], [10, 20, 30, 40, 50]]
+>>> spam[0]
+['cat','bat']
+3.Negative Indexes 负数
+-1 倒数第一个
+-2倒数第二个.....
+>>> spam = ['cat', 'bat', 'rat', 'elephant'] 
+>>> spam[-1] 
+'elephant'
+>>> spam[-3] 
+'bat' 
+>>> 'The ' + spam[-1] + ' is afraid of the ' + spam[-3] + '.'
+'The elephant is afraid of the bat.'
+
 
