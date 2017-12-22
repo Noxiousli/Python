@@ -108,5 +108,37 @@ Traceback (most recent call last):
 NameError: name 'eggs' is not defined
 1.Local Variables Cannot Be Used in the Global Scope
 global scope不可以使用local scope里的变量（local variable）
-2.
+def spam():
+    eggs = 99
+    ham = 10
+    print(eggs)
+spam()
+print(ham)
+结果
+99#没打印ham，ham在spam调用后，里面变量销毁了
+2.Global Variables Can Be Read from a Local Scope
+local scope可以使用global scope的变量（global scope）
+def spam():
+    print(eggs)
+eggs = 42
+spam()
+结果
+42
+3.Local and Global Variables with the Same Name
+local variale和global variable不要使用相同的名字，虽然语法上没错，但是容易混淆
+4.the global Statement(声明)
+如果你想在local scope里调整global variable，那么就在local scope里使用global statement
+结果global
+例子
+#########################
+def spam():
+    print(eggs)
+    eggs = 'spam local'
+eggs = 'global'
+spam()
+结果
+UnboundLocalError: local variable 'eggs' referenced before assignment
 
+This error happens because Python sees that there is an assignment statement for eggs in the spam() functionu
+and therefore considers eggs to be local. But because print(eggs) is executed before eggs is assigned anything, 
+the local variable eggs doesn’t exist. Python will not fall back to using the global eggs variable.
