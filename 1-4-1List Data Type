@@ -1,0 +1,25 @@
+一、Getting Individual Values in a List with Indexes
+1.index
+spam = ['cat', 'bat', 'rat', 'elephant']
+变量    value--list 里面的各个value在list里有index，我的理解是在list里的位置
+第一个value 'cat' index0
+第二个value 'bat' index1......
+例子
+##################################
+>>> spam = ['cat', 'bat', 'rat', 'elephant'] 
+>>> spam[0] 
+'cat'
+>>> spam[1] 
+'bat' 
+>>> spam[2] 
+'rat' 
+>>> spam[3] 
+'elephant'
+####################################
+>>> ['cat', 'bat', 'rat', 'elephant'][3] 
+'elephant' 
+>>> 'Hello ' + spam[0] 
+'Hello cat' 
+>>> 'The ' + spam[1] + ' ate the ' + spam[0] + '.' 
+'The bat ate the cat.'
+
