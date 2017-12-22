@@ -88,11 +88,14 @@ slice[1:4]第一个数字是开始value的index，第二个数字减去1是最�
 ##############################################
 >>> spam = ['cat', 'bat', 'rat', 'elephant'] 
 >>> spam[1] = 'aardvark'
->>> spam ['cat', 'aardvark', 'rat', 'elephant'] 
+>>> spam 
+['cat', 'aardvark', 'rat', 'elephant'] 
 >>> spam[2] = spam[1] 
->>> spam ['cat', 'aardvark', 'aardvark', 'elephant'] 
+>>> spam 
+['cat', 'aardvark', 'aardvark', 'elephant'] 
 >>> spam[-1] = 12345 
->>> spam ['cat', 'aardvark', 'aardvark', 12345]
+>>> spam 
+['cat', 'aardvark', 'aardvark', 12345]
 
 五、List Concatenation and List Replication
 相加和大量复制
