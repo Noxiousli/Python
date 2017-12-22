@@ -1,0 +1,77 @@
+A method is the same thing as a function
+查找index
+增加append insert
+一、Finding a Value in a List with the index() Method
+index（）使用它来确认一个value是否在list里，返回值是index
+当一个list里包含多个一样的value时，返回排在第一个的index
+##########################################################################
+>>> spam = ['hello', 'hi', 'howdy', 'heyas'] 
+>>> spam.index('hello') 
+0
+>>> spam.index('heyas') 
+3 
+>>> spam.index('howdy howdy howdy') 
+Traceback (most recent call last): 
+File "<pyshell#31>", line 1, in <module> spam.index('howdy howdy howdy') 
+ValueError: 'howdy howdy howdy' is not in list
+##########################################################################
+>>> spam = ['Zophie', 'Pooka', 'Fat-tail', 'Pooka'] 
+>>> spam.index('Pooka')
+1
+##########################################################################
+
+二、Adding Values to Lists with the append() and insert() Methods
+在list尾部增加，使用append（）
+任意位置，使用insert（）
+##########################################################################
+>>> spam = ['cat', 'dog', 'bat'] 
+>>> spam.append('moose')
+>>> spam 
+['cat', 'dog', 'bat', 'moose']
+##########################################################################
+>>> spam = ['cat', 'dog', 'bat'] 
+>>> spam.insert(1, 'chicken') #1，代表插在index1位置，chicken是插入值
+>>> spam ['cat', 'chicken', 'dog', 'bat']
+##########################################################################
+
+三、Removing Values from Lists with remove()
+删除remove（），当知道index时使用def spam（3）；当知道value时，用remove
+当有多个是删除第一个
+##########################################################################
+>>> spam = ['cat', 'bat', 'rat', 'elephant'] 
+>>> spam.remove('bat') 
+>>> spam
+['cat', 'rat', 'elephant']
+##########################################################################
+>>> spam = ['cat', 'bat', 'rat', 'elephant'] 
+>>> del spam[2] 
+>>> spam 
+['cat', 'bat', 'elephant'] 
+##########################################################################
+
+四、Sorting the Values in a List with the sort() Method
+排序：纯数字或者纯string，但是不能排序二者的混合体
+都是string时，默认大写字母排在前面，不管26个字母顺序，如果想要改变，见下面例子
+>>> spam = [2, 5, 3.14, 1, -7] 
+>>> spam.sort() 
+>>> spam [-7, 1, 2, 3.14, 5]                              #从小到大
+
+>>> spam = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
+>>> spam.sort() 
+>>> spam 
+['ants', 'badgers', 'cats', 'dogs', 'elephants']          #按照字母顺序
+
+>>> spam.sort(reverse=True) 
+>>> spam 
+['elephants', 'dogs', 'cats', 'badgers', 'ants']           #倒序
+
+>>> spam = ['Alice', 'ants', 'Bob', 'badgers', 'Carol', 'cats']
+>>> spam.sort()
+>>> spam 
+['Alice', 'Bob', 'Carol', 'ants', 'badgers', 'cats']
+
+>>> spam = ['a', 'z', 'A', 'Z']
+>>> spam.sort(key=str.lower)
+>>> spam 
+['a', 'A', 'z', 'Z']
+
