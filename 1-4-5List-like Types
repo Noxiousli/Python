@@ -20,3 +20,14 @@ False
 * * * h * * * 
 * * * i * * *
 * * * e * * *
+二、string里的值的改变
+1.不可以使用index直接改变
+例如把a换成the
+>>> name = 'Zophie a cat' 
+>>> name[7] = 'the'
+错误
+正确如下
+>>> name = 'Zophie a cat' 
+>>> newName = name[0:7] + 'the' + name[8:12]
+>>> newName 
+'Zophie the cat'
