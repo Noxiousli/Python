@@ -12,6 +12,6 @@ True
 False 
 >>> 'p' not in name 
 False
->>> for i in name: 
+>>> for i in name: ##########把list name里的string都打印出来
     print('* * * ' + i + ' * * *')
 * * * Z * * * * * * o * * * * * * p * * * * * * h * * * * * * i * * * * * * e * * *
