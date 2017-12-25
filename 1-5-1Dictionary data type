@@ -1,4 +1,28 @@
 一、the dictionary data type
-dictionary也有index，但是不是不叫index，叫做key，而且不只是可以是整数，可以是任何
-##############################
+1.dictionary也有index，但是不是不叫index，叫做key，而且不只是可以是整数integer，可以是integer，string
+############################################################
 >>> myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+这个dictionary里有三个key，分别是‘size’，'color'，'disposition'
+     每个key对应一个value，分别是'fat'， 'gray'， 'loud。      '##这叫做key-value pair
+2.怎么使用key呢，和list一样
+变量[key]
+key是string
+############################################################
+>>> myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
+>>> myCat['size'] 
+'fat'
+>>> 'My cat has ' + myCat['color'] + ' fur.' 
+'My cat has gray fur.
+############################################################
+key是integer key不想list，string，tuple里的index一样，需要从0开始
+>>> spam = {12345: 'Luggage Combination', 42: 'The Answer'}
+
+3.dictionary里的数据不像list里的按照顺序来
+>>> spam = ['cats', 'dogs', 'moose']         #spam与bacon包含的内容相同，顺序不同，所以False
+>>> bacon = ['dogs', 'moose', 'cats'] 
+>>> spam == bacon 
+False 
+>>> eggs = {'name': 'Zophie', 'species': 'cat', 'age': '8'} 
+>>> ham = {'species': 'cat', 'age': '8', 'name': 'Zophie'} 
+>>> eggs == ham 
+True
