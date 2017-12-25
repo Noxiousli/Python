@@ -1,0 +1,9 @@
+list,dictionary这些可变数据类型，使用reference
+>>> spam = [0, 1, 2, 3, 4, 5] 
+>>> cheese = spam      #sapm赋值给cheese
+>>> cheese[1] = 'Hello!' #改变chesse里的值，按说spam不应该改变
+>>> spam
+[0, 'Hello!', 2, 3, 4, 5]  #可是spam改变了！这是因为存在变量里的不是list本身，而是reference，spam赋值给cheese的是reference，
+                            spam和chesse这两个变量使用同一个reference
+>>> cheese
+[0, 'Hello!', 2, 3, 4, 5]
