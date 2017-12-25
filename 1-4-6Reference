@@ -32,4 +32,5 @@ print(spam)
 
 
 
-
+总结：
+Variables do not store list values directly; they store references to lists.
