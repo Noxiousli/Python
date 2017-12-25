@@ -62,6 +62,11 @@ Traceback (most recent call last):
     list(1)
 TypeError: 'int' object is not iterable
 >>> 
-2
-
+2.tuple
+>>> tuple([[1],[2,3]]) #list转tuple
+([1], [2, 3])
+>>> 
+>>> tuple('hell')  #string转tuple
+('h', 'e', 'l', 'l')
+>>> 
 
