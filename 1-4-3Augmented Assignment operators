@@ -1,6 +1,6 @@
 种类：5种 加减乘除取余数
 形式：+=；-=；*=；/=；%=
-数据类型4:int；float ；string ；list
+数据类型4:int；float ；string ；list;tuple
 >>> spam = 42
 >>> spam += 1
 >>> spam 43
