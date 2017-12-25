@@ -41,4 +41,27 @@ False
 1.用括号，把value扩起来
 例如 spam（1，2，）
 2.是不可变的immutable
+只有一个value时，要在后面加逗号，不然Python大哥会把它当成其他数据类型
+>>> x = (1)
+>>> type((x))
+<class 'int'>
+>>> x = (1,)
+>>> type((x))
+<class 'tuple'>
+>>> 
+
+四、list（）与tuple（）数据转换
+1.list
+>>> list((1,2,3))  #转换tuple成list
+[1, 2, 3]
+>>> list('Hello')  #转换string成list
+['H', 'e', 'l', 'l', 'o']
+>>> list(1)      #不能转换int
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    list(1)
+TypeError: 'int' object is not iterable
+>>> 
+2
+
 
