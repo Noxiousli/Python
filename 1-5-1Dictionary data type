@@ -1,0 +1,4 @@
+一、the dictionary data type
+dictionary也有index，但是不是不叫index，叫做key，而且不只是可以是整数，可以是任何
+##############################
+>>> myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}
