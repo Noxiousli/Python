@@ -1,0 +1,55 @@
+一、keys();values();items()
+#######################################
+>>> spam = {'color': 'red', 'age': 42}
+>>> spam.keys()
+dict_keys(['color', 'age'])
+>>> spam.values()
+dict_values(['red', 42])
+>>> spam.items()
+dict_items([('color', 'red'), ('age', 42)])
+>>> list(spam.items())
+[('color', 'red'), ('age', 42)]
+>>> 
+######################################
+
+配合for loop使用，循环打印出dictionary里的value
+1.somelist.values()打印key
+>>> spam = {'color': 'red', 'age': 42}
+>>> for v in spam.values(): 
+          print(v)
+结果
+red 
+42
+2.somelist.keys()打印value
+>>> spam = {'color': 'red', 'age': 42}
+>>> for k in spam.keys():
+          print(k)
+结果
+color 
+age
+3.somelist.items()
+>>> spam = {'color': 'red', 'age': 42}
+>>> for i in spam.items(): 
+            print(i)
+结果
+('color', 'red')            ###打印出来是tuple类型
+('age', 42)
+
+
+升级版，把value和key赋值给变量，默认key在前，value在后面
+#######################################
+>>> spam = {'color': 'red', 'age': 42}
+>>> for k, v in spam.items():
+	print('Key: ' + k + ' Value: ' + str(v))
+
+Key: color Value: red
+Key: age Value: 42
+#######################################
+
+>>> for s, a in spam.items():
+	print('Key: ' + s + ' Value: ' + str(a))
+
+	
+Key: color Value: red
+Key: age Value: 42
+#######################################
