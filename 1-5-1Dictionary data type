@@ -40,4 +40,5 @@ False
 >>> 'baba' in eggs
 False
 
-三、在使用数据之前还要检查一下
+
+
