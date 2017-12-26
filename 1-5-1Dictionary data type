@@ -26,3 +26,18 @@ False
 >>> ham = {'species': 'cat', 'age': '8', 'name': 'Zophie'} 
 >>> eggs == ham 
 True
+
+
+二、Checking Whether a Key or Value Exists in a Dictionary
+使用in/not in检查某个key或者value是否在dictionar里面
+>>> eggs = {'name': 'Zophie', 'species': 'cat', 'age': '8'} 
+>>> 'name' in eggs.keys()
+True
+>>> 'Zophie' in eggs.values()
+True
+>>> 'baba' in eggs.keys()
+False
+>>> 'baba' in eggs
+False
+
+三、在使用数据之前还要检查一下
