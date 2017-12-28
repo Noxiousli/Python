@@ -72,4 +72,15 @@ try:
 except exception:
 finally: #不管except exception是否可以执行，都会被执行。
 
-5.4exception 
+5.4exception 可以加argument raise
+num = input(":")
+if float(num) < 0:
+    raise ValueError("Negative!") #ValueError这个exception
+结果
+:-3.0
+Traceback (most recent call last):
+  File "/Users/Will/Documents/12.py", line 3, in <module>
+    raise ValueError("Negative!")
+ValueError: Negative!
+
+
