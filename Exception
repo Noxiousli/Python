@@ -1,0 +1,72 @@
+5.让错误不要打扰其他人exception handling
+code放在try里，然后把电脑里的提示错误放在except里
+例子：
+def spam(divideBy):
+    return 42 / divideBy
+
+print(spam(2))
+print(spam(12))
+print(spam(0))
+print(spam(1))
+结果
+21.0
+3.5
+ZeroDivisionError: division by zero
+
+#########################不要打扰别人
+def spam(divideBy):
+    try:
+        return 42 / divideBy
+    except ZeroDivisionError:
+        print('Error: Invalid argument.')
+
+print(spam(2))
+print(spam(12))
+print(spam(0))
+print(spam(1))
+结果
+21.0
+3.5
+Error: Invalid argument.
+None
+42.0
+5.1可以有多个except_exception（也即是zeroerror这种错误提示）
+5.2except后面加exception的话，前面没有错误，程序会发出制定错误提示，如果后续没有错误，会继续执行下去。如果前面有错误，那么程序将会中断，出现红色的错误提示。
+怎么样让程序不出现红色错误提示呢？那就是except后面什么都不加。
+例如：
+try:
+    print(1)
+    print(ni) #错误
+    num1 = 7
+    num2 = 0
+    print(num1/num2) #错误
+    print('新年好')
+except:
+    print('这里有一个错误')
+    
+结果：
+1
+这里有一个错误
+看下面这个，和她有什么不同
+try:
+    print(1)
+    print(ni) #错误
+    num1 = 7
+    num2 = 0
+    print(num1/num2) #错误
+    print('新年好')
+except ZeroError:
+    print('这里有一个错误')
+1
+Traceback (most recent call last):
+  File "/Users/Will/Documents/2.py", line 3, in <module>
+    print(ni)
+NameError: name 'ni' is not defined  #zeroerror没有被执行，因为在这之前有一个错误。
+5.3 finally 很有趣，不管怎么样都会被执行，而except则不同。
+try:
+except exception:#如果可以执行，那么下面的except不可以执行。反之。
+except:
+
+try:
+except exception:
+finally: #不管except exception是否可以执行，都会被执行。
