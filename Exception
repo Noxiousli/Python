@@ -83,4 +83,13 @@ Traceback (most recent call last):
     raise ValueError("Negative!")
 ValueError: Negative!
 
+5.5 raise放在except里面re-raise exception
+try:
+   num = 5 / 0
+except:
+   print("An error occurred")
+   raise
+结果：
+An error occurred #except执行结果
 
+ZeroDivisionError: division by zero#raise执行结果
