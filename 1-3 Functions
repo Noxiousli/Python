@@ -143,39 +143,6 @@ This error happens because Python sees that there is an assignment statement for
 and therefore considers eggs to be local. But because print(eggs) is executed before eggs is assigned anything, 
 the local variable eggs doesn’t exist. Python will not fall back to using the global eggs variable.
 因为local scope里面有assignment‘=’赋值，所以认为eggs是local variable
-5.让错误不要打扰其他人exception handling
-code放在try里，然后把电脑里的提示错误放在except里
-例子：
-def spam(divideBy):
-    return 42 / divideBy
-
-print(spam(2))
-print(spam(12))
-print(spam(0))
-print(spam(1))
-结果
-21.0
-3.5
-ZeroDivisionError: division by zero
-
-#########################不要打扰别人
-def spam(divideBy):
-    try:
-        return 42 / divideBy
-    except ZeroDivisionError:
-        print('Error: Invalid argument.')
-
-print(spam(2))
-print(spam(12))
-print(spam(0))
-print(spam(1))
-结果
-21.0
-3.5
-Error: Invalid argument.
-None
-42.0
-
 
 ‘’‘增加sololearn里的内容‘’‘
 1.function的名字可以像value一样被赋值给其他名字
