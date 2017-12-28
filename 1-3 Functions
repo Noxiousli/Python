@@ -204,4 +204,18 @@ from math import pi #也可以调用一个module里的多个function，用，逗
 print(pi)
 结果
 3.141592653589793
-4.
+
+4.module或者function换名字
+
+You can import a module or object under a different name using the as keyword. This is mainly used when a module or object has a long or confusing name.
+For example:
+from math import sqrt as square_root ##function换名字
+print(square_root(100)) 换了名字之后竟然不用加module的名字了，也就是math.square_root！为什么呢？因为被import了！
+Try It Yourself
+
+Result:
+>>>
+10.0
+>>>
+import math as m ##给module换名字
+print(m.sqrt(25))
