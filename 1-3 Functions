@@ -176,3 +176,14 @@ Error: Invalid argument.
 None
 42.0
 
+
+‘’‘增加sololearn里的内容‘’‘
+function的名字可以像value一样被赋值给其他名字
+######################################
+def multiply(x, y):
+   return x * y
+a = 4
+b = 7
+operation = multiply #multiply赋值给operation
+print(operation(a, b))#operation 调用
+
