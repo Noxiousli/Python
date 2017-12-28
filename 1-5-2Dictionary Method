@@ -1,3 +1,5 @@
+
+
 一、keys();values();items()
 #######################################
 >>> spam = {'color': 'red', 'age': 42}
@@ -53,3 +55,31 @@ Key: age Value: 42
 Key: color Value: red
 Key: age Value: 42
 #######################################
+
+二、The get() Method 里面有两个arguments，第一个是key，第二个是如果没有这个key，返回的值，默认0
+>>> picnicItems = {'apples': 5, 'cups': 2} 
+>>> 'I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.' 
+'I am bringing 2 cups.' 
+>>> 'I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.'
+'I am bringing 0 eggs.'
+
+三、The setdefault() Method
+>>> spam = {'name': 'Pooka', 'age': 5} 
+>>> spam.setdefault('color', 'black')  #arguments，第一个是想要加的key，第二个是value
+'black'                #返回一个value值,如果key是已经存在的，就返回在dictionary对应的value，如果不存在这个key，就返回刚才定义的值
+>>> spam 
+{'color': 'black', 'age': 5, 'name': 'Pooka'} 
+>>> spam.setdefault('color', 'white') 
+'black' 
+>>> spam 
+{'color': 'black', 'age': 5, 'name': 'Pooka'}
+
+#######################################################################################
+message = 'It was a bright cold day in April, and the clocks were striking thirteen.'#理解一下，string和list很像
+count = {}
+
+for e in message: #这一步就是string message的每个成分，空格也算
+     count.setdefault(e,0)#把成分当做key，先给这个成分的value设置一个初始值0
+     count[e] = count[e] + 1
+print(count)
+#######################################################################################
