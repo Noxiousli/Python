@@ -178,7 +178,7 @@ None
 
 
 ‘’‘增加sololearn里的内容‘’‘
-function的名字可以像value一样被赋值给其他名字
+1.function的名字可以像value一样被赋值给其他名字
 ######################################
 def multiply(x, y):
    return x * y
@@ -186,4 +186,22 @@ a = 4
 b = 7
 operation = multiply #multiply赋值给operation
 print(operation(a, b))#operation 调用
+2.之前学习知道function可以在其他function里调用，其实他也可以在其他function的argument里，也就是function（）括号里
+def add(x, y):
+  return x + y
 
+def do_twice(func, x, y):
+  return func(func(x, y), func(x, y)) #不明白的地方，这里是自己随便return的，还是有语法规则？？？？？？？
+
+a = 5
+b = 10
+
+print(do_twice(add, a, b)) #调用add这个function在argument里
+3.有些function在module里，使用前，需要import一下。如果你只需要module里面的某些功能，可以这么写：
+from module得name import 你需要的function
+from math import pi #也可以调用一个module里的多个function，用，逗号隔开
+
+print(pi)
+结果
+3.141592653589793
+4.
