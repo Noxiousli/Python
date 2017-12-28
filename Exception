@@ -62,6 +62,7 @@ Traceback (most recent call last):
   File "/Users/Will/Documents/2.py", line 3, in <module>
     print(ni)
 NameError: name 'ni' is not defined  #zeroerror没有被执行，因为在这之前有一个错误。
+
 5.3 finally 很有趣，不管怎么样都会被执行，而except则不同。
 try:
 except exception:#如果可以执行，那么下面的except不可以执行。反之。
@@ -70,3 +71,5 @@ except:
 try:
 except exception:
 finally: #不管except exception是否可以执行，都会被执行。
+
+5.4exception 
