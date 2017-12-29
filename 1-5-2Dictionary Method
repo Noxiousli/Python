@@ -83,3 +83,7 @@ for e in message: #这一步就是string message的每个成分，空格也算
      count[e] = count[e] + 1
 print(count)
 #######################################################################################
+
+四、pretty printing
+这是pprint.pprint()可以让结果打印更漂亮
+
