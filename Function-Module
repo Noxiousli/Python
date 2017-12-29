@@ -1,4 +1,3 @@
-F
 一、random.randint()
 import random 
 for i in range(5): #打印5次
@@ -11,7 +10,6 @@ while True:
   if response == 'exit':
     sys.exit() 
   print('You typed ' + response + '.')
-
-M
-一、append（）；insert（）
-return value of append() and insert() is None
+三、pprint.pprint()
+import pprint
+在dictionary里用，可以把里面的item按顺序打印
