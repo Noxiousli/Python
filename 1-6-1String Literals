@@ -1,0 +1,18 @@
+一、Escape Characters
+Escape character
+
+\' Single quote  #spam = 'Say hi to Bob\'s mother.'
+\" Double quote#同上
+\t Tab#一个tab
+\n Newline (line break)
+\\ Backslash
+
+二、raw Strings
+忽略掉string里的Escape Characters
+例如
+>>> print('2\t3')
+2	3
+>>> print(r'2\t3')#放在string外面
+2\t3
+>>> 
+   
