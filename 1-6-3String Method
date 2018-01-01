@@ -1,0 +1,35 @@
+一、字母大小写转换
+   upper() #somestring.upper(）把string里的字母（letter）转成大写
+   lower()#转成小写
+   islower/isupper()#确认一个string里除数字以外的是否是大写，还是小写。输出是Boolean值，也就是True，False
+注意嗷，有一点
+>>> spam = 'Hello'#给spam赋值
+>>> spam.upper()#把spam转成大写
+'HELLO'
+>>> spam
+'Hello'#刚才不是把spam给变成大写了吗？怎么现在恢复了呢？这些方法会返回一个·新的·string，但是却不改变原来的，如果想要改变就这样spam = spam.upper()
+Note that these methods do not change the string itself but return new string values.
+If you want to change the original string, you have to call upper() or lower() on the 
+string and then assign the new string to the variable where the original was stored. 
+#########################################
+print('How are you?') 
+feeling = input() 
+if feeling.lower() == 'great':
+  print('I feel great too.') 
+else: print('I hope the rest of your day is good.')
+
+How are you? 
+GREat 
+I feel great too.
+#########################################
+
+二、The isX String Methods#检查一个string的属性
+字母/字母，数字          isupper()字母全部大写。
+字母/字母，数字          islower()字母全部小写。
+only字母。              isalpha()only是字母。 
+字母/字母，数字/数字       isalnum()全是数字，全是字母，混合。
+only数字。              isdecimal()
+only space,newline,tabs isspace()
+字母/字母，数字            istitle()单词首字母大写
+
+
