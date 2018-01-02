@@ -23,13 +23,30 @@ GREat
 I feel great too.
 #########################################
 
-二、The isX String Methods#检查一个string的属性
-字母/字母，数字          isupper()字母全部大写。
-字母/字母，数字          islower()字母全部小写。
-only字母。              isalpha()only是字母。 
+二、The isX String Methods#检查一个string的属性  #返回是Boolean值，常用于检查input是否符合要求
+字母/字母，数字           isupper()字母全部大写。
+字母/字母，数字           islower()字母全部小写。
+only字母。               isalpha()only是字母。 
 字母/字母，数字/数字       isalnum()全是数字，全是字母，混合。
-only数字。              isdecimal()
+only数字。               isdecimal()
 only space,newline,tabs isspace()
 字母/字母，数字            istitle()单词首字母大写
+########################################################
+while True: 
+   print('Enter your age:') 
+   age = input() 
+   if age.isdecimal():
+      break 
+   print('Please enter a number for your age.')
+
+while True: 
+   print('Select a new password (letters and numbers only):') 
+   password = input() 
+   if password.isalnum():
+      break 
+   print('Passwords can only have letters and numbers.')
+结果
+  
+   
 
 
