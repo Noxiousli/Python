@@ -74,7 +74,8 @@ True
 ########################################################
 
 四、The join() and split() String Methods
-1.join()#list of strings,list里的string，最后输出string
+1.join() #list变string
+#list of strings,list里的string，最后输出string
 >>> spam = ['me', 'you', 'he']
 >>> ','.join(spam) #这个method的使用方法有点不同。其他都是some.method(),这个是把要加入进去的放在前面
 ‘me，you，he’#在每个value后面加入了逗号
@@ -84,6 +85,14 @@ True
 
 >>> ' '.join(['My', 'name', 'is', 'Simon'])
 'My name is Simon'
+2.split() #string变list
+>>> 'My name is Simon'.split() #空格分割
+['My', 'name', 'is', 'Simon']
 
+>>> 'MyABCnameABCisABCSimon'.split('ABC') abc分割
+['My', 'name', 'is', 'Simon'] 
+>>> 'My name is Simon'.split('m') #遇见m分割
+['My na', 'e is Si', 'on']
 
-
+五、Justifying Text with rjust(), ljust(), and center()
+修改
