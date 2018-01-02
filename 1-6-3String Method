@@ -46,7 +46,44 @@ while True:
       break 
    print('Passwords can only have letters and numbers.')
 结果
-  
-   
+Enter your age: 
+forty two 
+Please enter a number for your age. 
+Enter your age: 
+42 
+Select a new password (letters and numbers only): 
+secr3t! 
+Passwords can only have letters and numbers. 
+Select a new password (letters and numbers only): 
+secr3t 
+########################################################
+
+
+三、The startswith() and endswith() String Methods #返回值Boolean,应用在检验一个string和另一个string的部分是否相同（==）
+string部分检测：开头：somestring.startwith() #一个string的开头部分
+              结尾:somestring.endswith()#一个string的结尾部分
+########################################################
+>>> spam = 'Hello'
+>>> spam.startswith('H')
+True
+>>> spam.startswith('e')#需要按照顺序！虽然开头有e，但是在e之前还有h呢
+False  
+>>> spam.endswith('lo')
+True
+>>> 
+########################################################
+
+四、The join() and split() String Methods
+1.join()#list of strings,list里的string，最后输出string
+>>> spam = ['me', 'you', 'he']
+>>> ','.join(spam) #这个method的使用方法有点不同。其他都是some.method(),这个是把要加入进去的放在前面
+‘me，you，he’#在每个value后面加入了逗号
+
+>>> 'ABC'.join(['My', 'name', 'is', 'Simon']) 
+'MyABCnameABCisABCSimon'
+
+>>> ' '.join(['My', 'name', 'is', 'Simon'])
+'My name is Simon'
+
 
 
