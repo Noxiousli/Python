@@ -13,3 +13,6 @@ while True:
 三、pprint.pprint()
 import pprint
 在dictionary里用，可以把里面的item按顺序打印
+四、pyperclip.paste()复制，粘贴，不知道什么用？
+module:pyperclip
+function:paste()/copy()
