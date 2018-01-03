@@ -95,8 +95,18 @@ True
 ['My na', 'e is Si', 'on']
 
 五、Justifying Text with rjust(), ljust(), and center()
-修改string
+增加string
 1.rjust()右边加东西
 'Hello'.rjust(10，-)#数字是整个string的个数
 2ljust()#左边
 3.center()#两边加
+
+六、Removing Whitespace with strip(), rstrip(), and lstrip()
+删除string
+ strip(),#删除两边
+ rstrip(),#删除右边
+ lstrip()#删除左边
+
+七、Copying and Pasting Strings with the pyperclip Module
+module:pyperclip
+function:paste()/copy()
