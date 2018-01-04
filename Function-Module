@@ -2,6 +2,8 @@
 import random 
 for i in range(5): #打印5次
 print(random.randint(1, 10))#1-10随机数字
+
+
 二、sys.exit()
 import sys
 while True: 
@@ -10,9 +12,16 @@ while True:
   if response == 'exit':
     sys.exit() 
   print('You typed ' + response + '.')
+  
+  
 三、pprint.pprint()
 import pprint
 在dictionary里用，可以把里面的item按顺序打印
+
+
 四、pyperclip.paste()复制，粘贴，不知道什么用？
 module:pyperclip
 function:paste()/copy()
+
+五、copy.copy()/copy.deepcopy()用在list的reference上
+
