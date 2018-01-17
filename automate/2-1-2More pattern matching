@@ -1,0 +1,24 @@
+一、Grouping with Parentheses
+1.使用括号，划分内容成groups
+#####################
+import re
+phoneNumber = re.compile(r'（\d\d\d）-（\d\d\d-\d\d\d\d）')#一个括号一个组，这里面两个括号，两个组
+mo = phoneNumber.search('My number is 415-555-4242.')
+>>> mo.groups()#全部的
+('415', '555-4242')#是tuple，所以可以使用多重赋值。a, b = mo.groups()
+                     a = '415' b = '555-4242'
+>>> mo.group(1)#第一组
+'415'
+>>> mo.group(2)#第二组
+'555-4242'
+#####################
+2.查找的内容有括号
+比如查找(415) 555-4242这种类型的，那么正则表达式可以写成：（r''）--r('(\(\d\d\d\)) (\d\d\d-\d\d\d\d)')
+#####################
+phoneNumber = re.compile(r'(\(\d\d\d\)) (\d\d\d-\d\d\d\d)')
+mo = phoneNumber.search('My number is (415) 555-4242.')
+print('phone number found: '+ mo.group())
+#####################
+
+二、Matching Multiple Groups with the Pipe
+
