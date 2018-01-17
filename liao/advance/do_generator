@@ -1,0 +1,62 @@
+一、一边循环一边计算的机制，称为生成器：generator，用来节省内存
+1.形式1
+>>> L = [x * x for x in range(10)]#是[]
+>>> L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> g = (x * x for x in range(10))#是（）
+>>> g
+<generator object <genexpr> at 0x1022ef630>
+2.形式1如何打印呢？
+2.1 next()
+如果要一个一个打印出来，可以通过next()函数获得generator的下一个返回值：
+使用next()打印，每输入一次，就打印一个，按顺序打印，超出范围时，报错
+2.2 for loop generator是可以迭代的
+>>> g = (x * x for x in range(10))
+>>> for n in g:
+...     print(n)
+... 
+0
+1
+4
+9
+16
+25
+36
+49
+64
+81
+3.形式2 函数，做形式1做不到到的
+def fib(max):
+    n, a, b = 0, 0, 1
+    while n < max:
+        yield b#有了yield，就不是普通函数，是generator
+        a, b = b, a + b
+        n = n + 1
+    return 'done'#结束循环
+#定义完函数并没有用，需要使用for打印里面的内容
+for i in fib(6):
+   print(i)
+1
+1
+2
+3
+5
+8
+#但是return的done没有打印出来，因为执行完最后一个yield，就停止了
+#使用捕获错误来解决
+>>> g = fib(6)
+>>> while True:
+...     try:
+...         x = next(g)
+...         print('g:', x)
+...     except StopIteration as e:
+...         print('Generator return value:', e.value)
+...         break
+...
+g: 1
+g: 1
+g: 2
+g: 3
+g: 5
+g: 8
+Generator return value: done
