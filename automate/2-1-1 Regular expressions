@@ -1,0 +1,34 @@
+一、finding Patterns of text without regular expressions
+不使用正则表达式
+#415-555-4242查找这种类型的电话号码
+def isPhoneNumber(text):  
+    if len(text) != 12:#先判断整个是12个字符吗
+      return False
+    for i in range(0, 3):#循环判断前三个数字是否是数字
+      if not text[i].isdecimal():
+        return False
+    if text[3] != '-':#判断text的第四个字符是‘——’吗
+      return False
+    for i in range(4, 7):#判断第5到第7个数字是数字吗
+      if not text[i].isdecimal():
+        return False
+    if text[7] != '-':
+      return False
+    for i in range(8, 12):
+      if not text[i].isdecimal():
+        return False 
+return True
+
+
+二、finding Patterns of text with regular expressions
+使用正则表达式
+1.使用re 模块里的re.compile()产生一个regex object放在变量里，下面这个例子也就是放在phoneNumRegex
+import re
+phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')#使用re.compile(里面填regular expressions)
+2.有了regex object之后，就使用Regex object的search() method，搜索文本,返回一个match.object,放在变量里
+mo = phoneNumRegex.search('My number is 415-555-4242.')
+3.返回的ma tch.object如果找到内容就返回内容，找不到就返回None,使用group（）method打印出找到的内容
+print(mo.group())#如果search（）返回时None的match.object(),就不能使用group（）这个方法了
+
+总结，import re--re.compile(....)--[regex object]--regex object.search()--[match object]--match object.group()
+先搜索，再提取
