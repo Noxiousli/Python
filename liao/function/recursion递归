@@ -1,0 +1,38 @@
+一、自己调用自己的函数
+1.定义函数--调用自己
+阶乘：
+def fac(n):
+  if n == 1:
+    return 1
+  else:
+    return n * fac(n - 1)
+
+2.斐波拉契数列（生兔子）
+#斐波拉契数列 递归实现
+def F(n):
+    if n == 1:
+        return 1
+    if n == 2:
+        return 1
+    else:
+        return F(n-1) + F(n-2)
+result = F(20)
+print('总共有%d对小兔子' % result)
+
+#迭代
+
+def fa(max):
+    a = 0
+    b = 1
+    n = 0
+    while n < max:
+        print(b)
+        a = b
+        b = a + b
+        n = n + 1
+    return 'done'
+
+
+3.汉诺塔
+1/22/2018还是没搞懂，思路是知道了，但是不知道内部是怎么是实现的
+
