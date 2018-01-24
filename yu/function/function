@@ -22,11 +22,28 @@ c = 7
 三、闭包
 1.定义：内部函数引用外部函数的变量
 2.内部函数可以应用外部函数变量，但是不可以直接修改，需要加nonlocal
+def fun1():
+    print('fun1()正在被调用...')
+    def fun2():
+        print('fun2()正在被调用...')
+    return fun2
+
+i = fun1()#fun1()的return值给了i，也就是fun2()
+i = fun1()()#fun1()执行，然后返回fun2，第二个括号是调用fun2
+
+def fun3(x):
+    def fun4(y):
+        print(x*y)
+    return fun4
+fun3(4)(6)
+
 def fun3():
-    x = 2
+    x = 4
     def fun4():
-    nonlocal x
-    x *= x
-    return fun4()
+        nonlocal x
+        x *= x
+        return x
+    return fun4()#返回函数的值，和上面不一样，上面是返回函数
+fun3()#不是fun3()(),思考下为什么呢
 
 
