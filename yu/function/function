@@ -30,7 +30,7 @@ def fun1():
 
 i = fun1()#fun1()的return值给了i，也就是fun2()
 i = fun1()()#fun1()执行，然后返回fun2，第二个括号是调用fun2
-
+##闭包##
 def fun3(x):
     def fun4(y):
         print(x*y)
@@ -40,7 +40,7 @@ fun3(4)(6)
 def fun3():
     x = 4
     def fun4():
-        nonlocal x
+        nonlocal x#修改外部函数的变量
         x *= x
         return x
     return fun4()#返回函数的值，和上面不一样，上面是返回函数
