@@ -46,4 +46,22 @@ def fun3():
     return fun4()#返回函数的值，和上面不一样，上面是返回函数
 fun3()#不是fun3()(),思考下为什么呢
 
+三、函数文档
+写在函数开头部分，可以解释程序，方便别人理解代码。
+def Dec2Bin(dec):
+    '这款毛孔'#函数文档，通过函数名字.__doc__打印出来，只有放在第一行的才可以打印出来
+    temp = []
+    result = ''
+    while dec:
+        quo = dec % 2
+        dec = dec // 2
+        temp.append(quo)
+
+    while temp:
+        result += str(temp.pop())
+    
+    return result
+
+print(Dec2Bin(62))
+
 
