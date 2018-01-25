@@ -64,4 +64,22 @@ def Dec2Bin(dec):
 
 print(Dec2Bin(62))
 
+四、
+>>> help(print)
+Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+    
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    # 文件类型对象，默认是sys.stdout（标准输出流）
+    sep:   string inserted between values, default a space.
+    # 第一个参数如果有多个值（第一个参数是收集参数），各个值之间默认用空格（space）隔开
+    end:   string appended after the last value, default a newline.
+    # 打印最后一个值之后默认参数一个新行标识符(‘\n’)
+    flush: whether to forcibly flush the stream.
+    # 是否强制刷新流
+
 
