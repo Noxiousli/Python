@@ -81,5 +81,48 @@ print(...)
     # 打印最后一个值之后默认参数一个新行标识符(‘\n’)
     flush: whether to forcibly flush the stream.
     # 是否强制刷新流
+ 五、匿名函数lambda#消除了匿名的烦恼
+ lambda x : 2 + x -----创造了一个函数
+ #######################################
+ 下面这个函数可以很好的理解lambda
+ def make_repeat(n):
+        return lambda s : s * n
+
+double = make_repeat(2)#这一步，return 了一个匿名函数：lambda s:s*2
+print(double(8))# 8是赋值给s的所以结果是16
+print(double('FishC'))#结果 FishCFishC
+#######################################
+ 
+ 1.BIF filter()过滤器#满足条件，就可以留下
+ filter(条件，可迭代数据)#条件（函数或None【意思是删除0，保留非0】）
+ 例如：
+ 删除偶数，只留奇数
+ a.先定义一个函数
+ def a(x):
+  return x%2==1
+ b.确定要进行操作的可迭代数据[1,4,5,7]
+ c.开始！
+ list(filter(a,[1,4,5,7]))
+ 结果：[1,5,7]
+ 
+ 2.filter与lambda应用
+ a.函数 lambda
+ b.数据
+ c.开始！
+ list(filter(lambda x : x > 5, [1, 4, 6, 7]))
+结果：[6，7]
+ 
+ 3.map()#操作猛如虎
+ list(map(lambda x : x+2, range(3)))
+ 结果：[2,3,4]
+ 接下来。如果我们要用普通函数来操作：
+ def a(x):
+  return x + 2
+ list(map(a, range(3)))
+ 相比较就很麻烦了
+ 
+ 六、递归
+ python默认100层
+ 
 
 
