@@ -1,0 +1,28 @@
+一、os模块 operating system 操作系统
+os 模块提供了非常丰富的方法用来处理文件和目录。常用的方法如下表所示：
+----------------------------------------------------------------------
+import os
+---------os.getcwd()
+         #返回当前工作目录，也就是你现在操作的python文件在哪个文件夹
+         os.getcwd()
+         '/Users/Will/Documents/Pyth/python_Test'
+---------chdir('path')
+         #改变工作目录，比如当前是c盘，可以改为e盘，或者文件夹位置改变。os.chdir('/Users/Will/Documents/Pyth/python_work')
+--------- os.listdir('.')
+          #显示目录内容,默认当前。也可以写成os.listdir('.');显示上一级目录内容os.listdir('..')
+          os.listdir('.')
+          ['.DS_Store', 'add.mindnode', 'python_liao.mindnode', 'Python_automate.mindnode', 'python_yu.mindnode']
+---------mkdir('path')
+         #创建新的单层目录（文件夹），也就是一个目录，已存在报错
+---------makedirs('path')
+         #创建新的多层目录，就是创建一个目录a，里面包含目录b，已存在报错
+---------remove('path')
+         #删除文件！不是文件夹
+         os.remove('/Users/Will/Documents/Pyth/oo/p/OpenMe.mp3')#删除OpenMe.mp3
+---------rmdir('path')
+         #删除单层目录,不可以删除非空目录，会报错
+         os.rmdir('/Users/Will/Documents/Pyth/oo/p')#删除目录p
+---------removedirs('path')#删除多层目录，从子目录一直删除到父目录，不可以删除非空目录，会报错
+         
+
+         
