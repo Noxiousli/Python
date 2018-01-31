@@ -1,0 +1,56 @@
+os.path模块不属于os模块
+--------os.path.basename('path=目录+文件名')
+        #删除路径中的目录，返回文件名
+        >>> os.path.basename('/Users/Will/Desktop/hj.txt')
+        'hj.txt'
+--------os.path.dirname('path=目录+文件名')
+        #删除文件名，返回目录路径
+        >>> os.path.dirname('/Users/Will/Desktop/hj.txt')
+        '/Users/Will/Desktop'
+--------os.path.join('path1','path2'....)
+        #目录合并：把path1 和 path2 合并
+        >>> os.path.join('l', 'o', 'v', 'e')
+        'l/o/v/e'
+        --*--os.path.join()应用--*--
+        在新建一个目录前，先把新目录，完整路径使用jion写出来
+        1.>>> os.path.join('/Users/michael', 'testdir')
+        '/Users/michael/testdir'
+        2.# 然后创建一个目录:
+        >>> os.mkdir('/Users/michael/testdir')
+--------os.path.split('path')
+        #把目录路径与文件名分开，返回一个元组（path，file_name）
+        >>> os.path.split('/Users/Will/Desktop/hj.txt')
+        ('/Users/Will/Desktop', 'hj.txt')
+--------os.path.splitext('path')
+        #分离文件名与扩展名
+        >>> os.path.splitext('/Users/Will/Desktop/hj.txt')
+        ('/Users/Will/Desktop/hj', '.txt')
+--------os.path.getsize('path or 文件名')
+        #返回一个文件的字节大小
+        今天天气很不错
+        哈哈哈哈
+        >>> os.path.getsize('/Users/Will/Desktop/hj.txt')
+        35#11个汉字，是utf-8编码，一个汉字3个字节，共33个字节，再加两个回车
+--------os.path.getatime('path or 文件名')
+        #文件【最近打开】的时间，返回一个浮点型秒数
+        >>> os.path.getatime('/Users/Will/Desktop/hj.txt')
+        1517392763.9549925
+        #使用time模块的localtime
+        import time
+        time.localtime（os.path.getatime('/Users/Will/Desktop/hj.txt')）
+--------os.path.getctime()#建立时间
+--------os.path.getmtime()#修改时间
+--------****************----------------------------
+判断，返回True False
+os.path.exists('path')#判断指定路径文件或目录是否存在
+os.path.isabs('path')#判断指定路径是否为绝对路径
+os.path.isdir('path')#判断指定路径是否存在，且是一个目录
+os.path.isfile('path')#判断指定路径是否存在，且是一个文件
+os.path.islink('path')#判断指定路径是否存在，且是一个符号链接？？？？win下是桌面快件键这种
+os.path.ismount('path')#判断指定路径是否存在，且是一个挂载点 win下各种盘：e盘，c盘
+os.path.samefile('path1','path2')#判断两个路径是否指向同一个文件？？？
+        
+      
+        
+        
+        
