@@ -22,7 +22,31 @@ import os
 ---------rmdir('path')
          #删除单层目录,不可以删除非空目录，会报错
          os.rmdir('/Users/Will/Documents/Pyth/oo/p')#删除目录p
----------removedirs('path')#删除多层目录，从子目录一直删除到父目录，不可以删除非空目录，会报错
-         
+---------removedirs('path')
+         #删除多层目录，从子目录一直删除到父目录，不可以删除非空目录，会报错
+---------rename（old, new）
+         #重命名文件，不是文件夹
+         os.rename('hj.txt', '刻刻.txt')
+---------os.walk('path')
+         #通过list（os.walk('path')）查看，里面是很多元组，每个元组（‘路径’，[包含目录]，[包含文件]）
+---------os.uname()#要获取详细的系统信息，可以调用uname()函数
+         注意uname()函数在Windows上不提供，也就是说，os模块的某些函数是跟操作系统相关的。
+***************************以下是支持路径操作，常用的一些定义，支持所有平台*******************************
+---------os.curdir#不加括号，指代当前目录
+         os.curdir
+         '.'
+---------os.pardir#指代上级目录
+         os.pardir
+         '..'
+---------os.sep#输出操作系统特定的路径分隔符
+         os.sep
+         ‘/’
+---------os.linesep#操作系统的‘行’终止符
+         os.linesep
+         '\n'
+---------os.name#当前操作系统类型
+         os.name
+         如果是posix，说明系统是Linux、Unix或Mac OS X，如果是nt，就是Windows系统。
+
 
          
