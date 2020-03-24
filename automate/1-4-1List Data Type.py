@@ -1,5 +1,5 @@
 纠正：
-list value只的是整个list值，list里面的各个value叫做item
+list value指整个list值，list里面的各个value叫做item
 
 一、Getting Individual Values in a List with Indexes
 一个list里面的value可以是任何data type，可以混合
